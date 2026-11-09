@@ -77,34 +77,36 @@
 
 :root {
   --radius: 0.625rem;
-  /* Warm ink + ember palette */
-  --background: oklch(0.17 0.012 60);
-  --foreground: oklch(0.95 0.015 80);
-  --card: oklch(0.21 0.014 60);
-  --card-foreground: oklch(0.95 0.015 80);
-  --popover: oklch(0.21 0.014 60);
-  --popover-foreground: oklch(0.95 0.015 80);
-  --primary: oklch(0.72 0.16 50);
-  --primary-foreground: oklch(0.17 0.012 60);
-  --primary-glow: oklch(0.8 0.14 75);
-  --secondary: oklch(0.25 0.015 60);
-  --secondary-foreground: oklch(0.95 0.015 80);
-  --muted: oklch(0.25 0.015 60);
-  --muted-foreground: oklch(0.68 0.02 75);
-  --accent: oklch(0.28 0.02 60);
-  --accent-foreground: oklch(0.95 0.015 80);
+  /* Light beige + lavender palette, ember accent on the name */
+  --background: oklch(0.95 0.025 80);
+  --foreground: oklch(0.22 0.02 60);
+  --card: oklch(0.97 0.02 80);
+  --card-foreground: oklch(0.22 0.02 60);
+  --popover: oklch(0.97 0.02 80);
+  --popover-foreground: oklch(0.22 0.02 60);
+  --primary: oklch(0.82 0.09 300);
+  --primary-foreground: oklch(0.28 0.08 300);
+  --primary-glow: oklch(0.88 0.07 310);
+  --ember: oklch(0.66 0.17 45);
+  --ember-glow: oklch(0.74 0.15 65);
+  --secondary: oklch(0.91 0.03 80);
+  --secondary-foreground: oklch(0.22 0.02 60);
+  --muted: oklch(0.91 0.03 80);
+  --muted-foreground: oklch(0.48 0.03 60);
+  --accent: oklch(0.89 0.035 80);
+  --accent-foreground: oklch(0.22 0.02 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.95 0.015 80 / 12%);
-  --input: oklch(0.95 0.015 80 / 15%);
-  --ring: oklch(0.72 0.16 50);
-  --gradient-ember: linear-gradient(120deg, var(--primary), var(--primary-glow));
+  --border: oklch(0.22 0.02 60 / 12%);
+  --input: oklch(0.22 0.02 60 / 15%);
+  --ring: oklch(0.7 0.12 300);
+  --gradient-ember: linear-gradient(120deg, var(--ember), var(--ember-glow));
   --gradient-glow: radial-gradient(
     closest-side,
-    color-mix(in oklab, var(--primary) 45%, transparent),
+    color-mix(in oklab, var(--primary) 55%, transparent),
     transparent
   );
-  --shadow-ember: 0 18px 40px -14px color-mix(in oklab, var(--primary) 60%, transparent);
+  --shadow-primary: 0 18px 40px -14px color-mix(in oklab, var(--primary) 90%, transparent);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -183,8 +185,8 @@
   background-image: var(--gradient-ember);
 }
 
-@utility shadow-ember {
-  box-shadow: var(--shadow-ember);
+@utility shadow-primary {
+  box-shadow: var(--shadow-primary);
 }
 
 @utility bg-grid {
